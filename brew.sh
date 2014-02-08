@@ -1,0 +1,10 @@
+# brew packages:
+# - sbcl
+# - emacs
+# - coreutils
+# - git
+# - node
+# - ssh-copy-id
+# - tmux
+# - wget
+# - zsh
