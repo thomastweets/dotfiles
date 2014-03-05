@@ -35,6 +35,7 @@
     autopair
     color-theme
     color-theme-solarized
+    zenburn-theme
     ein
     elscreen
     exec-path-from-shell

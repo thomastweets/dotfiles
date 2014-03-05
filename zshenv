@@ -9,5 +9,9 @@ export LANG=en_US.UTF-8
 export FSLDIR=/usr/local/fsl
 . ${FSLDIR}/etc/fslconf/fsl.sh
 
+# Freesurfer Setup
+export FREESURFER_HOME=/Applications/freesurfer
+. $FREESURFER_HOME/SetUpFreeSurfer.sh
+
 typeset -U path
 path=(~/anaconda/bin /usr/local/fsl/bin /usr/local/bin $path)
