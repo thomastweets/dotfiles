@@ -11,6 +11,7 @@ export FSLDIR=/usr/local/fsl
 
 # Freesurfer Setup
 export FREESURFER_HOME=/Applications/freesurfer
+export FS_FREESURFERENV_NO_OUTPUT=1
 . $FREESURFER_HOME/SetUpFreeSurfer.sh
 
 typeset -U path

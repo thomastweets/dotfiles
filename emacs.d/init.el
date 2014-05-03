@@ -149,7 +149,7 @@
 ;; (setq ido-show-dot-for-dired t)
 
 (require 'helm-config)
-(helm-mode 0)
+(helm-mode 1)
 
 (server-mode 1)
 
