@@ -15,4 +15,4 @@ export FS_FREESURFERENV_NO_OUTPUT=1
 . $FREESURFER_HOME/SetUpFreeSurfer.sh
 
 typeset -U path
-path=(~/anaconda/bin /usr/local/fsl/bin /usr/local/bin $path)
+path=(~/.cask/bin ~/anaconda/bin /usr/local/fsl/bin /usr/local/bin $path)

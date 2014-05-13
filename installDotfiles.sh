@@ -10,3 +10,6 @@ then
 fi
 ln -s ~/dotfiles/emacs.d/init.el ~/.emacs.d/init.el
 ln -s ~/dotfiles/emacs.d/modules ~/.emacs.d/modules
+
+# install cask
+curl -fsSkL https://raw.github.com/cask/cask/master/go | python
