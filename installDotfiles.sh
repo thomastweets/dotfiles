@@ -4,12 +4,12 @@ ln -s ~/dotfiles/zshenv ~/.zshenv
 ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/gitconfig ~/.gitconfig
 ln -s ~/dotfiles/gitignore_global ~/.gitignore_global
-if [ ! -e ~/dotfiles/.emacs.d ]
+if [ ! -e ~/dotfiles/.atom ]
 then
-	mkdir ~/.emacs.d
+	mkdir ~/.atom
 fi
-ln -s ~/dotfiles/emacs.d/init.el ~/.emacs.d/init.el
-ln -s ~/dotfiles/emacs.d/modules ~/.emacs.d/modules
-
-# install cask
-curl -fsSkL https://raw.github.com/cask/cask/master/go | python
+ln -s ~/dotfiles/atom/config.cson ~/.atom/config.cson
+ln -s ~/dotfiles/atom/keymap.cson ~/.atom/keymap.cson
+ln -s ~/dotfiles/atom/snippets.cson ~/.atom/snippets.cson
+ln -s ~/dotfiles/atom/init.coffee ~/.atom/init.coffee
+ln -s ~/dotfiles/atom/styles.less /.atom/styles.less

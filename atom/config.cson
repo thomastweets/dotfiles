@@ -1,0 +1,35 @@
+"*":
+  "exception-reporting":
+    userId: "9f3d84ac-2592-df50-d7c9-c06c1916d0fd"
+  welcome:
+    showOnStartup: false
+  "meteor-helper":
+    production: true
+  editor:
+    fontSize: 14
+    invisibles: {}
+  core:
+    disabledPackages: [
+      "atom-color-highlight"
+    ]
+    themes: [
+      "atom-light-ui"
+      "solarized-light-syntax"
+    ]
+  linter: {}
+  "atom-color-highlight": {}
+  "atom-beautify":
+    _analyticsUserId: "6946be1c-81f0-473f-a818-a09b10d94758"
+  "markdown-stream":
+    externalWebBrowserPort: 8000
+    markedSettings:
+      gfm: true
+      breaks: true
+      tables: true
+      pedantic: true
+      sanitize: false
+      smartLists: false
+      smartypants: true
+      langPrefix: "lang-"
+    newlinesAsIsMode: false
+  "markdown-preview": {}

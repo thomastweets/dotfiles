@@ -1,4 +1,4 @@
-export EDITOR="emacsclient"
+export EDITOR="atom"
 
 export TERM=xterm-256color
 

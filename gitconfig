@@ -2,7 +2,7 @@
 	name = Thomas Emmerling
 	email = git@thomasemmerling.de
 [core]
-	excludesfile = /Users/thomasemmerling/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [pack]
 	threads = 0
 [color]
