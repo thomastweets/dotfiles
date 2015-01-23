@@ -13,8 +13,8 @@
       "atom-color-highlight"
     ]
     themes: [
-      "atom-light-ui"
-      "solarized-light-syntax"
+      "seti-ui"
+      "seti-monokai"
     ]
   linter: {}
   "atom-color-highlight": {}
@@ -33,3 +33,5 @@
       langPrefix: "lang-"
     newlinesAsIsMode: false
   "markdown-preview": {}
+  "atom-lint": {}
+  "autocomplete-plus": {}
