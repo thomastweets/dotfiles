@@ -33,5 +33,6 @@
       langPrefix: "lang-"
     newlinesAsIsMode: false
   "markdown-preview": {}
-  "atom-lint": {}
+  "atom-lint":
+    showViolationMetadata: false
   "autocomplete-plus": {}
