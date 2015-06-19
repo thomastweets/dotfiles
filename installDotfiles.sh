@@ -1,4 +1,6 @@
 #!/bin/zsh -f
+
+# ZSH
 if [ ! -e ~/.zshrc ]
 then
 	ln -s ~/dotfiles/zshrc ~/.zshrc
@@ -9,11 +11,13 @@ then
 	ln -s ~/dotfiles/zshenv ~/.zshenv
 fi
 
+# Tmux
 if [ ! -e ~/.tmux.conf ]
 then
 	ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 fi
 
+# Git
 if [ ! -e ~/.gitconfig ]
 then
 	ln -s ~/dotfiles/gitconfig ~/.gitconfig
@@ -24,7 +28,7 @@ then
 	ln -s ~/dotfiles/gitignore_global ~/.gitignore_global
 fi
 
-
+# Atom
 if [ ! -e ~/.atom ]
 then
 	mkdir ~/.atom
