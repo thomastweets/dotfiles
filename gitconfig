@@ -3,6 +3,7 @@
 	email = git@thomasemmerling.de
 [core]
 	excludesfile = ~/.gitignore_global
+	editor = atom --wait
 [pack]
 	threads = 0
 [color]
@@ -12,4 +13,8 @@
 [credential]
 	helper = osxkeychain
 [push]
-	default = matching
+	default = simple
+[merge]
+	summary = true
+	log = true
+	tool = opendiff
