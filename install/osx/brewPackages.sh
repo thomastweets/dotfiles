@@ -31,7 +31,6 @@ webkit2png
 phantomjs
 ffmpeg
 mongo
-sshfs
 trash
 tree
 ack
@@ -43,6 +42,11 @@ zsh
 reattach-to-user-namespace
 node
 ssh-copy-id
+fortune
+pstree
+pandoc
+shellcheck
+cowsay
 )
 
 # Install the binaries
