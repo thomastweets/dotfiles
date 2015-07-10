@@ -43,7 +43,20 @@ alias zs='source ~/.zshrc'
 # Suffix aliases
 alias -s html=google-chrome
 
+# Git aliases
+alias ga='git add'
+alias gd='git diff'
+alias gp='git push'
+alias gs='git status'
+alias gc='git commit'
+
+# zsh configuration reload
+alias zshre='source ~/.zshrc'
+
 #=================
 # prompt
 #=================
 export PROMPT='[%~] '
+
+# added by travis gem
+[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
