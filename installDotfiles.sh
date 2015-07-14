@@ -28,6 +28,12 @@ then
 	ln -s ~/dotfiles/gitignore_global ~/.gitignore_global
 fi
 
+# Scripts
+if [ ! -e /usr/local/bin/bv ]
+then
+	ln -s ~/dotfiles/scripts/bv /usr/local/bin/bv
+fi
+
 # Atom
 if [ ! -e ~/.atom ]
 then
