@@ -1,2 +1,2 @@
 #!/bin/bash
-/Applications/BrainVoyager/BrainVoyager\ QX.app/Contents/MacOS/Brainvoyager\ QX &
+/Applications/BrainVoyager/BrainVoyager\ QX.app/Contents/MacOS/Brainvoyager\ QX &> /dev/null &
