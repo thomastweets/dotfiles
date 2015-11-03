@@ -53,6 +53,10 @@ alias gc='git commit'
 # zsh configuration reload
 alias zshre='source ~/.zshrc'
 
+# docker environment
+alias de='env | grep DOCKER_'
+alias dm='docker-machine'
+
 #=================
 # prompt
 #=================
