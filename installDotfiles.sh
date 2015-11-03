@@ -41,27 +41,48 @@ then
 fi
 
 
-if [ ! -e ~/.atom/config.cson ]
-	then
-	ln -s ~/dotfiles/atom/config.cson ~/.atom/config.cson
+# if [ ! -e ~/.atom/config.cson ]
+	# then
+	ln -F -s ~/dotfiles/atom/config.cson ~/.atom/config.cson
+# fi
+
+# if [ ! -e ~/.atom/keymap.cson ]
+	# then
+	ln -F -s ~/dotfiles/atom/keymap.cson ~/.atom/keymap.cson
+# fi
+
+# if [ ! -e ~/.atom/snippets.cson ]
+	# then
+	ln -F -s ~/dotfiles/atom/snippets.cson ~/.atom/snippets.cson
+# fi
+
+# if [ ! -e ~/.atom/init.coffee ]
+	# then
+	ln -F -s ~/dotfiles/atom/init.coffee ~/.atom/init.coffee
+# fi
+
+# if [ ! -e ~/.atom/styles.less ]
+	# then
+	ln -F -s ~/dotfiles/atom/styles.less ~/.atom/styles.less
+# fi
+
+# if [ ! -e ~/.atom/projects.cson ]
+	# then
+	ln -F -s ~/dotfiles/atom/projects.cson ~/.atom/projects.cson
+# fi
+
+# Mutt
+if [ ! -e ~/.msmtprc ]
+then
+	ln -s ~/dotfiles/msmtprc ~/.msmtprc
 fi
 
-if [ ! -e ~/.atom/keymap.cson ]
-	then
-	ln -s ~/dotfiles/atom/keymap.cson ~/.atom/keymap.cson
+if [ ! -e ~/.muttrc ]
+then
+	ln -s ~/dotfiles/muttrc ~/.muttrc
 fi
 
-if [ ! -e ~/.atom/snippets.cson ]
-	then
-	ln -s ~/dotfiles/atom/snippets.cson ~/.atom/snippets.cson
-fi
-
-if [ ! -e ~/.atom/init.coffee ]
-	then
-	ln -s ~/dotfiles/atom/init.coffee ~/.atom/init.coffee
-fi
-
-if [ ! -e ~/.atom/styles.less ]
-	then
-	ln -s ~/dotfiles/atom/styles.less ~/.atom/styles.less
+if [ ! -e ~/.mutt ]
+then
+	ln -s ~/dotfiles/mutt ~/.mutt
 fi
