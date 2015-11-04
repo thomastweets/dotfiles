@@ -28,7 +28,6 @@ brew install homebrew/dupes/grep
 binaries=(
 graphicsmagick
 webkit2png
-phantomjs
 ffmpeg
 mongo
 trash
@@ -47,6 +46,12 @@ pstree
 pandoc
 shellcheck
 cowsay
+pkg-config
+zeromq
+unison
+mutt
+msmtp
+mosh
 )
 
 # Install the binaries
