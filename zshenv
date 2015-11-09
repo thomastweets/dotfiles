@@ -17,6 +17,3 @@ if [ -d "/Applications/freesurfer" ]; then
   export FS_FREESURFERENV_NO_OUTPUT=1
   . $FREESURFER_HOME/SetUpFreeSurfer.sh
 fi
-
-typeset -U path
-path=(~/.cask/bin ~/anaconda/bin /usr/local/fsl/bin /usr/local/bin $path)

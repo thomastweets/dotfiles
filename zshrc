@@ -64,3 +64,9 @@ export PROMPT='[%~] '
 
 # added by travis gem
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
+
+#=================
+# PATH
+#=================
+typeset -U path
+path=(~/.cask/bin ~/anaconda/bin /usr/local/fsl/bin /usr/local/bin $path)
