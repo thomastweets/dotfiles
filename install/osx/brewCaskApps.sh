@@ -44,6 +44,8 @@ java6
 teamviewer
 keka
 flashlight
+# http://www.neurolens.org/Download/download.php
+# neurolens
 )
 
 # fonts

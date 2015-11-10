@@ -52,6 +52,8 @@ unison
 mutt
 msmtp
 mosh
+pkg-config
+zeromq
 )
 
 # Install the binaries
