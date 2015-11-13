@@ -17,3 +17,5 @@ if [ -d "/Applications/freesurfer" ]; then
   export FS_FREESURFERENV_NO_OUTPUT=1
   . $FREESURFER_HOME/SetUpFreeSurfer.sh
 fi
+
+export BC_ENV_ARGS=~/.bcrc

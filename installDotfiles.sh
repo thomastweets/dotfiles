@@ -28,6 +28,12 @@ then
 	ln -s ~/dotfiles/gitignore_global ~/.gitignore_global
 fi
 
+# BC
+if [ ! -e ~/.bcrc ]
+then
+	ln -s ~/dotfiles/bcrc ~/.bcrc
+fi
+
 # Scripts
 if [ ! -e /usr/local/bin/bv ]
 then
