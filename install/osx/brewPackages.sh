@@ -13,6 +13,7 @@ brew update && brew upgrade brew-cask
 
 # Install GNU core utilities (those that come with OS X are outdated)
 brew install coreutils
+brew install gnu-sed --with-default-names
 
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
 brew install findutils
@@ -24,10 +25,14 @@ brew install bash
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 
+brew tap tldr-pages/tldr
+
 # Install other useful binaries
 binaries=(
 graphicsmagick
+netcat
 webkit2png
+nmap
 ffmpeg
 mongo
 trash
@@ -38,6 +43,7 @@ hub
 tmux
 wget
 zsh
+tldr
 reattach-to-user-namespace
 node
 ssh-copy-id
