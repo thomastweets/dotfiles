@@ -40,6 +40,11 @@ then
 	ln -s ~/dotfiles/scripts/bv /usr/local/bin/bv
 fi
 
+if [ ! -e /usr/local/bin/ml ]
+then
+	ln -s ~/dotfiles/scripts/ml /usr/local/bin/ml
+fi
+
 # Atom
 if [ ! -e ~/.atom ]
 then
