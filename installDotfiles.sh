@@ -34,6 +34,12 @@ then
 	ln -s ~/dotfiles/bcrc ~/.bcrc
 fi
 
+# Slate
+if [ ! -e ~/.slate ]
+then
+	ln -s ~/dotfiles/slate ~/.slate
+fi
+
 # Scripts
 if [ ! -e /usr/local/bin/bv ]
 then
