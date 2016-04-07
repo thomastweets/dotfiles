@@ -10,8 +10,6 @@
 	ui = auto
 [alias]
 	pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
-[credential]
-	helper = osxkeychain
 [push]
 	default = simple
 [merge]
