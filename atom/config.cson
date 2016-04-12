@@ -1,38 +1,19 @@
 "*":
+  Hydrogen: {}
+  "atom-beautify":
+    _analyticsUserId: "e1cb8ecf-ec33-4947-8e7e-9869c8ffe802"
+  "color-picker":
+    triggerKey: "E"
+  core:
+    themes: [
+      "atom-dark-ui"
+      "solarized-dark-syntax"
+    ]
+  editor:
+    invisibles: {}
   "exception-reporting":
-    userId: "9f3d84ac-2592-df50-d7c9-c06c1916d0fd"
+    userId: "9265c61f-c398-d1d1-839d-b52fd867581a"
+  "highlight-line": {}
+  "tree-view": {}
   welcome:
     showOnStartup: false
-  "meteor-helper":
-    production: true
-  editor:
-    fontSize: 14
-    invisibles: {}
-  core:
-    disabledPackages: [
-      "atom-color-highlight"
-    ]
-    themes: [
-      "seti-ui"
-      "seti-monokai"
-    ]
-  linter: {}
-  "atom-color-highlight": {}
-  "atom-beautify":
-    _analyticsUserId: "6946be1c-81f0-473f-a818-a09b10d94758"
-  "markdown-stream":
-    externalWebBrowserPort: 8000
-    markedSettings:
-      gfm: true
-      breaks: true
-      tables: true
-      pedantic: true
-      sanitize: false
-      smartLists: false
-      smartypants: true
-      langPrefix: "lang-"
-    newlinesAsIsMode: false
-  "markdown-preview": {}
-  "atom-lint":
-    showViolationMetadata: false
-  "autocomplete-plus": {}
