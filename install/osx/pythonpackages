@@ -1,14 +1,10 @@
-# just a list for now
 rainbowstream
 glances
 ansible
 pelican
 pelican-gist
 pylama
-
-# conda packages
 passlib
-
 nose
 nosetests-json-extended
 nose-watch
