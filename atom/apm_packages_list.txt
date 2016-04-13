@@ -11,6 +11,7 @@ language-latex
 latex
 hydrogen
 linter
+linter-pylama
 merge-conflicts
 minimap
 multi-cursor
