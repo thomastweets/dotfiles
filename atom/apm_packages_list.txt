@@ -1,5 +1,6 @@
 atom-beautify
 atom-pair
+autocomplete-bibtex
 color-picker
 dash
 ex-mode
@@ -9,8 +10,11 @@ hex
 highlight-line
 language-latex
 latex
+latex-plus
+latexer
 hydrogen
 linter
+linter-chktex
 linter-pylama
 merge-conflicts
 minimap
