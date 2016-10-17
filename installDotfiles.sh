@@ -1,105 +1,55 @@
 #!/bin/zsh -f
 
-# ZSH
-if [ ! -e ~/.zshrc ]
-then
-	ln -s ~/dotfiles/zshrc ~/.zshrc
-fi
+echo -e "\e[4mInstalling dotfiles via symlinks\e[0m"
+# Overwrite existing files?
+overwrite=false
 
-if [ ! -e ~/.zshenv ]
-then
-	ln -s ~/dotfiles/zshenv ~/.zshenv
-fi
+# List of dotfiles to install
+dotfiles=(
+zshrc
+zshenv
+tmux.conf
+gitconfig
+gitignore_global
+hyperterm.js
+bcrc
+slate
+atom/config.cson
+atom/keymap.cson
+atom/snippets.cson
+atom/init.coffee
+atom/styles.less
+atom/projects.cson
+)
 
-# Tmux
-if [ ! -e ~/.tmux.conf ]
-then
-	ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
-fi
-
-# Git
-if [ ! -e ~/.gitconfig ]
-then
-	ln -s ~/dotfiles/gitconfig ~/.gitconfig
-fi
-
-if [ ! -e ~/.gitignore_global ]
-then
-	ln -s ~/dotfiles/gitignore_global ~/.gitignore_global
-fi
-
-# BC
-if [ ! -e ~/.bcrc ]
-then
-	ln -s ~/dotfiles/bcrc ~/.bcrc
-fi
-
-# Slate
-if [ ! -e ~/.slate ]
-then
-	ln -s ~/dotfiles/slate ~/.slate
-fi
-
-# Scripts
-if [ ! -e /usr/local/bin/bv ]
-then
-	ln -s ~/dotfiles/scripts/bv /usr/local/bin/bv
-fi
-
-if [ ! -e /usr/local/bin/ml ]
-then
-	ln -s ~/dotfiles/scripts/ml /usr/local/bin/ml
-fi
-
-# Atom
-if [ ! -e ~/.atom ]
-then
-	mkdir ~/.atom
-fi
+for dotfile in $dotfiles; do
+	echo -e "Installing \e[31m$dotfile\e[0m"
+	if [ ! -e ~/.$dotfile ]; then
+		ln -s ~/dotfiles/$dotfile ~/.$dotfile
+		echo Done!
+	else
+		if [ "$overwrite" = true ]; then
+			echo file already existing, overwriting!
+			rm ~/.$dotfile
+			ln -s ~/dotfiles/$dotfile ~/.$dotfile
+			echo Done!
+		else
+			echo file already existing, skipping.
+		fi
+	fi
+done
 
 
-# if [ ! -e ~/.atom/config.cson ]
-	# then
-	ln -F -s ~/dotfiles/atom/config.cson ~/.atom/config.cson
+
+
+
+# # Scripts
+# if [ ! -e /usr/local/bin/bv ]
+# then
+# 	ln -s ~/dotfiles/scripts/bv /usr/local/bin/bv
 # fi
-
-# if [ ! -e ~/.atom/keymap.cson ]
-	# then
-	ln -F -s ~/dotfiles/atom/keymap.cson ~/.atom/keymap.cson
+#
+# if [ ! -e /usr/local/bin/ml ]
+# then
+# 	ln -s ~/dotfiles/scripts/ml /usr/local/bin/ml
 # fi
-
-# if [ ! -e ~/.atom/snippets.cson ]
-	# then
-	ln -F -s ~/dotfiles/atom/snippets.cson ~/.atom/snippets.cson
-# fi
-
-# if [ ! -e ~/.atom/init.coffee ]
-	# then
-	ln -F -s ~/dotfiles/atom/init.coffee ~/.atom/init.coffee
-# fi
-
-# if [ ! -e ~/.atom/styles.less ]
-	# then
-	ln -F -s ~/dotfiles/atom/styles.less ~/.atom/styles.less
-# fi
-
-# if [ ! -e ~/.atom/projects.cson ]
-	# then
-	ln -F -s ~/dotfiles/atom/projects.cson ~/.atom/projects.cson
-# fi
-
-# Mutt
-if [ ! -e ~/.msmtprc ]
-then
-	ln -s ~/dotfiles/msmtprc ~/.msmtprc
-fi
-
-if [ ! -e ~/.muttrc ]
-then
-	ln -s ~/dotfiles/muttrc ~/.muttrc
-fi
-
-if [ ! -e ~/.mutt ]
-then
-	ln -s ~/dotfiles/mutt ~/.mutt
-fi
