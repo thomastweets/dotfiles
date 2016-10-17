@@ -5,6 +5,7 @@
   "color-picker":
     triggerKey: "E"
   core:
+    telemetryConsent: "limited"
     themes: [
       "atom-dark-ui"
       "solarized-dark-syntax"
