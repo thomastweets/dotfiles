@@ -1,0 +1,9 @@
+#!/bin/sh
+# This uses secure defaults to generate new SSH keys (https://blog.g3rt.nl/upgrade-your-ssh-keys.html):
+# - using Ed25519 key
+# - using new RFC4716 key format
+# - 100 key derivation function rounds to slow down brute-forcing of the passphrase (- o 100)
+# - no comment (-C "")
+# The first command line argument is parsed as the filename for the new key
+
+ssh-keygen -C "" -o -a 100 -t ed25519 -f $1

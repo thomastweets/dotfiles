@@ -8,6 +8,8 @@ overwrite=false
 scripts=(
 bv
 ml
+delayType
+keygen
 )
 
 for script in $scripts; do

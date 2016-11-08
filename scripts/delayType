@@ -1,0 +1,13 @@
+#!/usr/bin/env osascript
+
+on run argv
+	delay item 1 of argv
+	set theString to item 2 of argv
+	set theCharacters to characters of theString
+	repeat with theItem in theCharacters
+		delay 0.05
+		tell application "System Events"
+			keystroke theItem
+		end tell
+	end repeat
+end run
