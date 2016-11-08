@@ -62,8 +62,8 @@ module.exports = {
     'hyperterm-1password',
     'hyperterm-bold-tab',
     'hyperlinks',
-    'hyperambient',
-    // 'hyperterm-solarized-dark',
+    //'hyperambient',
+    'hyperterm-solarized-light',
     // 'hyperterm-final-say'
   ],
 
