@@ -11,7 +11,7 @@ zshenv
 tmux.conf
 gitconfig
 gitignore_global
-hyperterm.js
+hyper.js
 bcrc
 slate
 atom/config.cson
