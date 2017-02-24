@@ -1,5 +1,8 @@
 module.exports = {
   config: {
+    // default shell
+    shell: '/usr/local/bin/zsh',
+    
     // default font size in pixels for all tabs
     fontSize: 14,
 
