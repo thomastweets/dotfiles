@@ -69,4 +69,4 @@ export PROMPT='[%~] '
 # PATH
 #=================
 typeset -U path
-path=(~/.cask/bin ~/anaconda/bin /usr/local/fsl/bin /usr/local/bin $path)
+path=(~/.cask/bin /anaconda2/bin /usr/local/fsl/bin /usr/local/bin $path)
