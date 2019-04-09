@@ -1,2 +1,0 @@
-#!/bin/bash
-/Applications/MATLAB_R2015a.app/bin/matlab &> /dev/null &

@@ -1,2 +1,0 @@
-#!/bin/bash
-/Applications/BrainVoyager/BrainVoyager.app/Contents/MacOS/BrainVoyager &> /dev/null &
