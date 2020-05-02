@@ -1,55 +1,53 @@
-#!/bin/zsh -f
+#!/usr/bin/env bash
 
-echo -e "\e[4mInstalling dotfiles via symlinks\e[0m"
+# Import colours
+source ~/dotfiles/ascii/colour.sh
+
+# banner
+# created with $~ toilet -f ~/dotfiles/ascii/CalvinS.flf --filter border DOTFILES
+echo -e "$(UI.Color.Red)
+┌──────────────────────┐
+│╔╦╗╔═╗╔╦╗╔═╗╦╦  ╔═╗╔═╗│
+│ ║║║ ║ ║ ╠╣ ║║  ║╣ ╚═╗│
+│═╩╝╚═╝ ╩ ╚  ╩╩═╝╚═╝╚═╝│
+└──────────────────────┘
+      Installation
+________________________
+$(UI.Color.Default)"
+
 # Overwrite existing files?
-overwrite=false
+echo -n "Do you want to overwrite existing dotfiles? [y/N]: "
+read -n 1 overwrite
+echo -e ""
 
-# List of dotfiles to install
-dotfiles=(
-zshrc
-zshenv
-tmux.conf
-gitconfig
-gitignore_global
-hyper.js
-bcrc
-slate
-atom/config.cson
-atom/keymap.cson
-atom/snippets.cson
-atom/init.coffee
-atom/styles.less
-atom/projects.cson
-)
+if [[ "$overwrite" == "y" ]]; then
+	echo -e "$(UI.Powerline.Lightning) $(UI.Color.Red)OK, I will overwrite existing dotfiles!$(UI.Color.Default)"
+	overwrite=true
+else
+	echo -e "Not overwriting existing dotfiles."
+	overwrite=false
+fi
 
-for dotfile in $dotfiles; do
-	echo -e "Installing \e[31m$dotfile\e[0m"
-	if [ ! -e ~/.$dotfile ]; then
-		ln -s ~/dotfiles/$dotfile ~/.$dotfile
-		echo Done!
+echo -e "________________________\n"
+echo -e "$(UI.Color.Bold)$(UI.Powerline.Cog) Installing dotfiles via symlinks$(UI.Color.Default)"
+
+for dotfile in ~/dotfiles/*; do
+	# skip directories and README.md
+	if [ -d $dotfile ] || [ $(basename $dotfile) == "README.md" ]; then
+		continue
+	fi
+	if [ ! -e ~/.$(basename $dotfile) ]; then
+		ln -s $dotfile ~/.$(basename $dotfile)
+		echo -e "$(UI.Color.Green)$(UI.Powerline.OK)$(UI.Color.Default) linking dotfile $(UI.Color.Italics).$(basename $dotfile)$(UI.Color.Default)"
 	else
-		if [ "$overwrite" = true ]; then
-			echo file already existing, overwriting!
-			rm ~/.$dotfile
-			ln -s ~/dotfiles/$dotfile ~/.$dotfile
-			echo Done!
+		if [ "$overwrite" == true ]; then
+			echo -e "$(UI.Color.Green)$(UI.Powerline.OK)$(UI.Color.Default) dotfile $(UI.Color.Italics).$(basename $dotfile)$(UI.Color.Default) already existing, $(UI.Color.Red)overwriting$(UI.Color.Default)"
+			rm ~/.$(basename $dotfile)
+			ln -s $dotfile ~/.$(basename $dotfile)
 		else
-			echo file already existing, skipping.
+			echo -e "$(UI.Color.Red)$(UI.Powerline.Fail)$(UI.Color.Default) dotfile $(UI.Color.Italics).$(basename $dotfile)$(UI.Color.Default) already existing, skipping"
 		fi
 	fi
 done
 
-
-
-
-
-# # Scripts
-# if [ ! -e /usr/local/bin/bv ]
-# then
-# 	ln -s ~/dotfiles/scripts/bv /usr/local/bin/bv
-# fi
-#
-# if [ ! -e /usr/local/bin/ml ]
-# then
-# 	ln -s ~/dotfiles/scripts/ml /usr/local/bin/ml
-# fi
+echo -e "$(UI.Powerline.Cog) $(UI.Color.Bold)Done!$(UI.Color.Default)"
